@@ -1,0 +1,10 @@
+Metadata-Version: 2.4
+Name: hello-service
+Version: 0.1.0
+Summary: A minimal Hello-Service using FastAPI with structured logging
+Author-email: Your Name <your.email@example.com>
+Requires-Dist: fastapi
+Requires-Dist: uvicorn[standard]
+Requires-Dist: loguru
+Requires-Dist: pytest
+Requires-Dist: httpx

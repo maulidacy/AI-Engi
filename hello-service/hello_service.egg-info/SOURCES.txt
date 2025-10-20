@@ -1,0 +1,11 @@
+pyproject.toml
+app/logging.py
+app/main.py
+app/version.py
+hello_service.egg-info/PKG-INFO
+hello_service.egg-info/SOURCES.txt
+hello_service.egg-info/dependency_links.txt
+hello_service.egg-info/requires.txt
+hello_service.egg-info/top_level.txt
+tests/test_health.py
+tests/test_version_contract.py

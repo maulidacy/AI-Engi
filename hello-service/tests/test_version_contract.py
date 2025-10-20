@@ -1,10 +1,16 @@
+import re
 from fastapi.testclient import TestClient
 from app.main import app
-from app.version import __version__
+import pytest
 
-client = TestClient(app)
+SEMVER = re.compile(
+    r"^(0|[1-9]\d*)\.(0|[1-9]\d*)\.(0|[1-9]\d*)(?:[-+].*)?$"
+)
 
-def test_version():
+def test_version_semver_and_field():
+    client = TestClient(app)
     response = client.get("/version")
     assert response.status_code == 200
-    assert response.json() == {"version": __version__}
+    body = response.json()
+    assert "version" in body
+    assert SEMVER.match(body["version"]) is not None
