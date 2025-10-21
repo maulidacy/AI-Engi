@@ -1,7 +1,7 @@
 from fastapi.testclient import TestClient
-from app.main import app
+from app.main import app # import objek FastAPI-mu (app) dari app/main.py
 
-import pytest
+import pytest # menandai file ini sebagai file pengujian untuk pytest
 
 def test_health_ok():
     client = TestClient(app)
